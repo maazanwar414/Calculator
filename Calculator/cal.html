@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Calculator – Animated</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <div class="container">
+    <div class="card" role="application" aria-label="Smart Calculator">
+      <!-- LEFT SIDE -->
+      <div class="left">
+        <div class="brand">
+          <div class="logo">SC</div>
+          <div>
+            <h1>Smart Calculator</h1>
+            <p class="lead">Interactive • Animated • AI-ready (optional)</p>
+          </div>
+        </div>
+
+        <div class="preview">
+          <div class="display" id="display">
+            <div class="expr" id="expr">0</div>
+            <div class="result" id="result">0</div>
+          </div>
+          <div class="history" id="history"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right">
+        <div class="topbar">
+          <div class="modes">
+            <button class="btn" id="clearBtn">Clear</button>
+            <button class="btn" id="delBtn">Del</button>
+            <button class="btn" id="modeBtn">Toggle Theme</button>
+          </div>
+        </div>
+
+        <div class="keys" id="keys">
+          <div class="key muted" data-value="(">(</div>
+          <div class="key muted" data-value=")">)</div>
+          <div class="key operator" data-value="%">%</div>
+          <div class="key operator" data-value="/">÷</div>
+
+          <div class="key" data-value="7">7</div>
+          <div class="key" data-value="8">8</div>
+          <div class="key" data-value="9">9</div>
+          <div class="key operator" data-value="*">×</div>
+
+          <div class="key" data-value="4">4</div>
+          <div class="key" data-value="5">5</div>
+          <div class="key" data-value="6">6</div>
+          <div class="key operator" data-value="-">−</div>
+
+          <div class="key" data-value="1">1</div>
+          <div class="key" data-value="2">2</div>
+          <div class="key" data-value="3">3</div>
+          <div class="key operator" data-value="+">+</div>
+
+          <div class="key" data-value="0">0</div>
+          <div class="key" data-value=".">.</div>
+          <div class="key" data-value="^">xʸ</div>
+          <div class="key primary big" id="equals">=</div>
+
+          <div class="key" data-value="sqrt(">√</div>
+          <div class="key" data-value="**2">x²</div>
+          <div class="key" data-value="!">!</div>
+          <div class="key" data-value="clear">C</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
