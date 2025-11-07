@@ -107,9 +107,9 @@ clearBtn.addEventListener('click', () => (expression = '', render()));
 delBtn.addEventListener('click', () => backspace());
 equalsBtn.addEventListener('click', () => calculate());
 modeBtn.addEventListener('click', () => {
-  const root = document.body;
-  const cur = root.getAttribute('data-theme');
-  root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  const body = document.body;
+  const cur = body.getAttribute('data-theme');
+  body.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
 });
 
 window.addEventListener('keydown', e => {
@@ -122,15 +122,10 @@ window.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     e.preventDefault();
     calculate();
-    return;
-  }
-  if (e.key === 'Backspace') {
+  } else if (e.key === 'Backspace') {
     e.preventDefault();
     backspace();
-    return;
-  }
-  if (e.key === 'Escape') {
-    e.preventDefault();
+  } else if (e.key === 'Escape') {
     expression = '';
     render();
   }
